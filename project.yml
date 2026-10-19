@@ -1,0 +1,51 @@
+name: SNTAT
+options:
+  minimumXcodeGenVersion: 2.38.0
+  deploymentTarget:
+    iOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "15.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    ENABLE_USER_SCRIPT_SANDBOXING: "YES"
+targets:
+  SNTAT:
+    type: application
+    platform: iOS
+    sources:
+      - path: SNTAT
+    info:
+      path: SNTAT/Info.plist
+      properties:
+        CFBundleDevelopmentRegion: ar
+        CFBundleDisplayName: سنتات
+        CFBundleName: SNTAT
+        CFBundleShortVersionString: "9.0.3"
+        CFBundleVersion: "905"
+        UILaunchStoryboardName: LaunchScreen
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIStatusBarStyle: UIStatusBarStyleDarkContent
+        UIViewControllerBasedStatusBarAppearance: true
+        NSCameraUsageDescription: "يحتاج سنتات إلى الكاميرا عند طلب التصوير أو البث داخل المنصة."
+        NSMicrophoneUsageDescription: "يحتاج سنتات إلى الميكروفون عند المشاركة الصوتية في الغرف."
+        NSPhotoLibraryUsageDescription: "يستخدم سنتات الصور التي تختارها لرفعها إلى المنصة."
+        NSPhotoLibraryAddUsageDescription: "يسمح سنتات بحفظ الوسائط عند اختيارك ذلك."
+        NSLocationWhenInUseUsageDescription: "يستخدم سنتات الموقع فقط عند طلب خدمات الموقع داخل المنصة."
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: false
+        CFBundleURLTypes:
+          - CFBundleURLName: shop.sntat.mobile
+            CFBundleURLSchemes:
+              - sntat
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: shop.sntat.mobile
+        CODE_SIGN_STYLE: Automatic
+        SUPPORTS_MACCATALYST: "NO"
+        GENERATE_INFOPLIST_FILE: "NO"
+    scheme:
+      testTargets: []
